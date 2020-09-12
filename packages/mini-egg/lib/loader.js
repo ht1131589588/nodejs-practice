@@ -98,7 +98,6 @@ function loadConfig(app) {
     // 处理mongoose
     if (config.mongoose) {
       const mongoose = require('mongoose')
-      const Schema = mongoose.Schema
       app.mongoose = mongoose
       const mongoDB = `mongodb://${config.mongoose.address}`
       await mongoose.connect(mongoDB, config.mongoose.options || {
